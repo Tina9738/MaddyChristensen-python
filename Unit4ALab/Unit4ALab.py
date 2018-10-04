@@ -1,27 +1,35 @@
 def main():
-    #word = input ("Give me a word.")
+    #word = open
+    #print (deVowel (str(word)))
+
 
     list1=[1, 2, 3, 4]
     x=7
-    list2=mathStuff(list1, x)
-    print (list2)
-
-
+    print (mathStuff(list1,x))
 
 
 #def deVowel(word):
     #mylist=word
-    #noVowel=''
-    #for letter in word:
-        #if(letter)==a or e or i or o or u:
+    #for letter in mylist:
+        #if letter==o:
+            #mylist.remove(str(letter))
+        #elif letter==e:
+            #mylist.remove(str(letter))
+            #print (mylist)
+
+    #return (mylist)
+
+
 
 
 
 def mathStuff(list1, x):
-    for stuff in list1:
-        list1.append(stuff*x)
-        return (list1)
+    newList=[]
+    for values in list1:
+        print (values)
+        newList.append(int(values) * (x))
 
+        return (newList)
 
 
 main()
