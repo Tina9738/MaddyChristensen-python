@@ -9,21 +9,18 @@ def main():
 
 
 def times10(list2):
-    for values in range (0, 5):
+    for values in range (1, 6):
         print (values+10)
         print (values*10)
 
-
+    return list2
 
 
 def multiples10(list4):
-    for value in range (0, 4):
-        list4.pop(value)
-        list4+(value*10)
+    for value in range (0, 5):
+        list4[value]=list4[value]*10
 
     return list4
-
-
 
 
 
