@@ -6,13 +6,20 @@ def main():
 
     print ("You're a "+str(year) + "!")
 
-    list1=[99, 92.7, 84.3, 90.7]
-    myaverage=averageGrade(list1, len(list1))
-    print("Your average grade is " + str(myaverage))
+    num=input("How many grades are you giving me?")
+    list1=[0]*int(num)
+    for grades in range(0,int(num)):
+        print(grades)
+        list1[grades]=int(input("Grade:"))
+    print(list1)
+    myGrade = averageGrade(list1)
 
-    print(letterGrade(myaverage))
 
-    print(finalGrade(myaverage))
+    print("Your average grade is " + str(myGrade))
+
+    print(letterGrade(myGrade))
+
+    print(finalGrade(myGrade))
 
 def whatYear (grade):
     int(grade)
@@ -30,9 +37,12 @@ def whatYear (grade):
 
 
 
-def averageGrade(mylist, x):
-    totalGrade=mylist[0]+mylist[1]+mylist[2]+mylist[3]
-    averagegrade=totalGrade/x
+def averageGrade(mylist):
+    print("averageGrade")
+    totalGrade=0
+    for i in mylist:
+        totalGrade=totalGrade+i
+    averagegrade=totalGrade/ len(mylist)
     return averagegrade
 
 def letterGrade(y):
